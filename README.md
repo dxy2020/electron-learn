@@ -22,28 +22,51 @@ npm init # 或 npm init -y
 }
 ```
 
+运行：package.json配置文件中的scripts字段下增加一条start命令：
+
+```json
+{
+  "scripts": {
+    "start": "electron ."
+  }
+}
+```
+
+```powershell
+npm start
+```
+
+
+
 ```powershell
 npm install --save-dev electron
 # 或 cnpm install --save-dev electron
 ```
 
-打包
+打包：将 Electron Forge 添加到您应用的开发依赖中，并使用其"import"命令设置 Forge 的脚手架。
 
 ```powershell
 npm install --save-dev @electron-forge/cli
 npx electron-forge import
 ```
 
+安装`npm install --save-dev @electron-forge/cli` 后 package.json scripts：
 
-
-
-
-```shell
-Host github.com
-	HostName github.com
-	IdentityFile ~/.ssh/github_id_rsa
-	PreferredAuthentications publickey
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  }
 ```
 
+使用 Forge 的 `make` 命令来创建可分发的应用程序：
 
+```
+npm run make
+```
 
+快捷键：
+
+* ctrl+shift+i   打开开发者工具

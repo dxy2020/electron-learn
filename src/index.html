@@ -6,12 +6,26 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Hello World!</title>
+    <link rel="stylesheet" href="./css/index.css">
   </head>
   <body>
+    <div class="title">
+      <div class="left"><img src="./img/electron.png" alt="标题" width="21" height="21">开发桌面应用</div>
+      <div class="right">
+        <span>&#x2015;</span>
+        <span>&#x2610;</span>
+        <span>&#x26CC;</span>
+      </div>
+    </div>
+    <div class="menu">
+      <div>文件(F)</div>
+      <div>编辑(E)</div>
+      <div>帮助(H)</div>
+    </div>
     <h1>Hello World!</h1>
     We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
     and Electron <span id="electron-version"></span>.
-    <script src="./renderer.js"></script>
+    <script src="../preload.js"></script>
   </body>
 </html>
