@@ -10,6 +10,7 @@ html, body {
   -webkit-app-region: drag;
   display: flex;
   justify-content: space-between;
+  font-size: 12px;
 }
 .title .left > img {
   vertical-align: middle;
@@ -22,6 +23,8 @@ html, body {
   width: 34px;
   text-align: center;
   height: 100%;
+  user-select: none;
+  -webkit-app-region: no-drag;
 }
 .title .right > span:hover {
   background-color: bisque;
