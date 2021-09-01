@@ -19,7 +19,8 @@ function createWindow () {
       // preload: path.join(__dirname, 'preload.js')
     }
   })
-  mainWindow.loadFile('./src/index.html');
+  // mainWindow.loadFile('./src/index.html');
+  mainWindow.loadFile(path.join(__dirname, 'src/index.html'));
   // mainWindow.loadURL(`file://${__dirname}/src/index.html`); //报错
   mainWindow.removeMenu();
   // const INCREMENT = 0.03;
@@ -110,7 +111,8 @@ function createRemindWindow (task) {
   })
   // 当有多个应用时，提醒窗口始终处于最上层
   remindWindow.setAlwaysOnTop(true);
-  remindWindow.loadFile('./src/remind.html');
+  // remindWindow.loadFile('./src/remind.html');
+  remindWindow.loadFile(path.join(__dirname, 'src/remind.html'));
   // remindWindow.loadURL(`file://${__dirname}/src/remind.html`);
   // 主进程发送消息给渲染进程
   remindWindow.show();
